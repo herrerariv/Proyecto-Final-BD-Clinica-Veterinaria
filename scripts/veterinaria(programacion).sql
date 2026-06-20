@@ -165,6 +165,110 @@ BEFORE INSERT OR UPDATE ON tratamiento_medicamento
 FOR EACH ROW
 EXECUTE FUNCTION validar_alergia_medicamento();
 
+-- ===================================================================
+
+-- Caso: Lilyan, no presenta alergias:
+-- sentencia para verificar si no las presenta.
+SELECT 
+    m.id_mascota,
+    m.nombre_mascota,
+    med.id_medicamento,
+    med.nombre_medicamento,
+    ma.descripcion_alergia,
+    t.id_tratamiento
+FROM mascota m
+CROSS JOIN medicamento med
+LEFT JOIN mascota_alergia ma
+    ON m.id_mascota = ma.id_mascota
+   AND med.id_medicamento = ma.id_medicamento
+INNER JOIN cita c
+    ON m.id_mascota = c.id_mascota
+INNER JOIN diagnostico d
+    ON c.id_cita = d.id_cita
+INNER JOIN tratamiento t
+    ON d.id_diagnostico = t.id_diagnostico
+WHERE m.id_mascota = 18
+  AND med.id_medicamento = 1
+  AND t.id_tratamiento = 18;
+
+-- Insercción del medicamento permitido.
+BEGIN;
+
+INSERT INTO tratamiento_medicamento (
+    dosis_indicada,
+    frecuencia_administracion,
+    via_administracion,
+    duracion_dias,
+    id_tratamiento,
+    id_medicamento
+)
+VALUES (
+    '1 tableta',
+    'Cada 24 horas',
+    'Oral',
+    5,
+    18,
+    1
+)
+RETURNING 
+    id_tratamiento_medicamento,
+    dosis_indicada,
+    frecuencia_administracion,
+    via_administracion,
+    duracion_dias,
+    id_tratamiento,
+    id_medicamento;
+
+-- Rollback para no guardar ese dato permanente.
+ROLLBACK;
+
+-- Caso: Payton, presenta alergias, el trigger no permitira la insercción.
+
+-- sentencia para verificar que sí Payton presenta alergias:
+SELECT 
+    m.id_mascota,
+    m.nombre_mascota,
+    med.id_medicamento,
+    med.nombre_medicamento,
+    ma.descripcion_alergia,
+    t.id_tratamiento
+FROM mascota m
+INNER JOIN mascota_alergia ma
+    ON m.id_mascota = ma.id_mascota
+INNER JOIN medicamento med
+    ON ma.id_medicamento = med.id_medicamento
+INNER JOIN cita c
+    ON m.id_mascota = c.id_mascota
+INNER JOIN diagnostico d
+    ON c.id_cita = d.id_cita
+INNER JOIN tratamiento t
+    ON d.id_diagnostico = t.id_diagnostico
+WHERE m.id_mascota = 1
+  AND med.id_medicamento = 1
+  AND t.id_tratamiento = 1;
+
+-- Intentar insertar el medicamento bloqueado:
+INSERT INTO tratamiento_medicamento (
+    dosis_indicada,
+    frecuencia_administracion,
+    via_administracion,
+    duracion_dias,
+    id_tratamiento,
+    id_medicamento
+)
+VALUES (
+    '5 ml',
+    'Cada 12 horas',
+    'Oral',
+    7,
+    1,
+    1
+);
+-- ERROR: No se puede asignar el medicamento Amoxicilina, porque la mascota Payton tiene una alergia registrada.
+
+-- Despues del error, ejecutar ROLLBACK
+ROLLBACK;
+
 -- ====================================================================
 
 -- TRANSACCIÓN: Anulación de factura y cancelación de cita relacionada
