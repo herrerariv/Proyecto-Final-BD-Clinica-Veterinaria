@@ -1,0 +1,1830 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "3090a208-0ee0-4079-804e-f248e82db8ad",
+        "type": "Table",
+        "position": {
+          "x": 1181.4269232368185,
+          "y": -569.1808864952887
+        },
+        "data": {
+          "label": "Propietario",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "a0dd8247-0c87-468f-a4d3-3c5668713c11",
+              "name": "id_propietario",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "aa4539ff-daf6-44bd-a126-7c6fa9d16e26",
+              "name": "nombres",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "60",
+              "isUnique": false,
+              "isOptional": false
+            },
+            {
+              "id": "c2f74cb0-bed0-4ba7-9608-acb3e395b2b1",
+              "name": "apellidos",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "60",
+              "isUnique": false,
+              "isOptional": false
+            },
+            {
+              "id": "a7df7bd6-fa3c-4ec6-8259-a99f03322670",
+              "name": "sexo",
+              "type": "CHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "1",
+              "isUnique": false,
+              "isOptional": false
+            },
+            {
+              "id": "b1b41bf4-634a-4016-bd2f-6ea7a6a44af4",
+              "name": "dui",
+              "type": "CHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "10",
+              "isUnique": true,
+              "isOptional": false
+            },
+            {
+              "id": "03b8e502-c891-4725-828c-becde1196e18",
+              "name": "correo",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "150",
+              "isUnique": true,
+              "isOptional": false
+            },
+            {
+              "id": "a091676d-a9de-43a3-a45d-234395e1d745",
+              "name": "direccion",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isUnique": false,
+              "isOptional": true
+            },
+            {
+              "id": "cda0282f-85ff-4e76-804e-91875c0dcd12",
+              "name": "telefono",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "14",
+              "isUnique": true,
+              "isOptional": true
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 225
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+        "type": "Table",
+        "position": {
+          "x": 850.9534508238261,
+          "y": -784.4079454179754
+        },
+        "data": {
+          "label": "Mascota",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "e65f554e-3fa2-4c2e-b973-6ce4d52cb407",
+              "name": "id_mascota",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "6b7d7475-f807-4c12-b8e8-8fa7fb02d6f8",
+              "name": "nombre_mascota",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "size": "60",
+              "isOptional": false
+            },
+            {
+              "id": "da1f550b-c0ae-42fb-93cd-5da297759200",
+              "name": "fecha_nacimiento",
+              "type": "DATE",
+              "position": 2,
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "21c4e066-e49d-4994-b0b8-655f1be500f7",
+              "name": "sexo",
+              "type": "CHAR(n)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "size": "1",
+              "isOptional": false
+            },
+            {
+              "id": "aa9211e4-37ff-410b-b1b5-41a912091eda",
+              "name": "color",
+              "type": "VARCHAR(n)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "size": "60",
+              "isOptional": true
+            },
+            {
+              "id": "9a23c01b-e69e-4363-9bfe-b30789db7121",
+              "name": "observaciones_mascota",
+              "type": "VARCHAR(n)",
+              "position": 5,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": true
+            },
+            {
+              "id": "da8db37b-121d-4f17-8a76-671b19a5eb2e",
+              "name": "estado_mascota",
+              "type": "VARCHAR(n)",
+              "position": 6,
+              "isPrimaryKey": false,
+              "size": "8",
+              "isOptional": false
+            },
+            {
+              "id": "4a58bffb-03fb-42fb-bfb8-c5ff84d88f9c",
+              "name": "peso",
+              "type": "NUMERIC(p s)",
+              "position": 7,
+              "isPrimaryKey": false,
+              "size": "(6,2)",
+              "isOptional": false
+            },
+            {
+              "id": "fk_04aa2f15-a8da-4740-b28a-49840fdc69c2",
+              "name": "fk_Propietario",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "e562809e-e626-445e-90f0-7b28f8ad8378",
+                "sourceTableId": "3090a208-0ee0-4079-804e-f248e82db8ad",
+                "columns": [
+                  {
+                    "id": "fk_a0dd8247-0c87-468f-a4d3-3c5668713c11",
+                    "name": "id_propietario",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false,
+              "position": 8
+            },
+            {
+              "id": "fk_8f7d9176-cf91-4863-be37-bca8485c7d07",
+              "name": "fk_Especie",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "7e536bb4-b287-4e94-8366-b5cf5efece88",
+                "sourceTableId": "296bce40-1575-4509-ad57-3659ab8438bd",
+                "columns": [
+                  {
+                    "id": "fk_7a86e295-9307-4059-8600-c151dd8edf91",
+                    "name": "id_especie",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false,
+              "position": 9
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 291
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "296bce40-1575-4509-ad57-3659ab8438bd",
+        "type": "Table",
+        "position": {
+          "x": 549.275146817531,
+          "y": -430.3050978328414
+        },
+        "data": {
+          "label": "Especie",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "7a86e295-9307-4059-8600-c151dd8edf91",
+              "name": "id_especie",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "03d5318d-abdf-4126-a50e-c0d494f1eb02",
+              "name": "nombre_especie",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "isUnique": true,
+              "isOptional": false,
+              "size": "50"
+            },
+            {
+              "id": "12b700d3-ffae-4c2a-97e9-fdf8f7548ad8",
+              "name": "descripcion_especie",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "isUnique": false,
+              "isOptional": true,
+              "size": "150"
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 100
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "9656b6cd-d188-4fde-a944-5aef4ffdb6b6",
+        "type": "Table",
+        "position": {
+          "x": -82.83925918538327,
+          "y": -553.7569634350726
+        },
+        "data": {
+          "label": "Especialidad",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "0ac8dc46-353e-4ff0-81e4-47ee2b1e11b8",
+              "name": "id_especialidad",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "5b42e5c0-6092-46c2-90b9-6bfcb03ba5f9",
+              "name": "nombre_especialidad",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "isUnique": true,
+              "size": "60",
+              "isOptional": false
+            },
+            {
+              "id": "18f61898-332c-4ca3-bcdc-0543220147a1",
+              "name": "descripcion_especialidad",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "isUnique": false,
+              "size": "255",
+              "isOptional": true
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 116
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "d0c57d8f-e40f-4812-8f74-a7b6808bae92",
+        "type": "Table",
+        "position": {
+          "x": 219.89754042463005,
+          "y": -863.6151179855499
+        },
+        "data": {
+          "label": "Veterinario",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "97665d54-781e-4200-9d87-2ca4e19423c0",
+              "name": "id_veterinario",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "c77f4904-3d2a-4b3c-9daa-b8e85f51ff55",
+              "name": "nombres",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "size": "60",
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "7888a683-2f4e-47cd-9719-d3ef0744f479",
+              "name": "apellidos",
+              "type": "VARCHAR(n)",
+              "position": 2,
+              "isPrimaryKey": false,
+              "size": "60",
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "84e4523a-675d-4f6f-94c3-cbf918f084bd",
+              "name": "sexo",
+              "type": "CHAR(n)",
+              "position": 3,
+              "size": "1",
+              "isUnique": false
+            },
+            {
+              "id": "a67ef0b8-653d-43a0-9134-b13eb371f949",
+              "name": "correo",
+              "type": "VARCHAR(n)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "size": "150",
+              "isOptional": false,
+              "isUnique": true
+            },
+            {
+              "id": "d4c7db46-29ac-4dd3-bece-7e8407e499a8",
+              "name": "dui",
+              "type": "CHAR(n)",
+              "position": 5,
+              "size": "10",
+              "isUnique": true
+            },
+            {
+              "id": "b94bb913-9611-4098-9973-a27c4a9edda7",
+              "name": "licencia",
+              "type": "VARCHAR(n)",
+              "position": 6,
+              "isPrimaryKey": false,
+              "size": "20",
+              "isOptional": false,
+              "isUnique": true
+            },
+            {
+              "id": "51c41861-bc2d-46f2-adf8-ed758964c25c",
+              "name": "telefono",
+              "type": "VARCHAR(n)",
+              "position": 7,
+              "isPrimaryKey": false,
+              "size": "20",
+              "isOptional": true,
+              "isUnique": true
+            },
+            {
+              "id": "f75e8f9c-2e37-4f67-836f-40039aa74492",
+              "name": "direccion",
+              "type": "VARCHAR(n)",
+              "position": 8,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "5a95cbae-5ce3-435c-b961-125e92b8f9c8",
+              "name": "estado_veterinario",
+              "type": "VARCHAR(n)",
+              "position": 9,
+              "isPrimaryKey": false,
+              "size": "8",
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "fk_ce05b9b8-ee1a-4f29-8f16-d7f434e0ea64",
+              "name": "fk_Especialidad",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "ec9e3198-4bf2-4d64-89cd-2afebe39a414",
+                "sourceTableId": "9656b6cd-d188-4fde-a944-5aef4ffdb6b6",
+                "columns": [
+                  {
+                    "id": "fk_0ac8dc46-353e-4ff0-81e4-47ee2b1e11b8",
+                    "name": "id_especialidad",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isUnique": false,
+              "position": 10
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 300
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+        "type": "Table",
+        "position": {
+          "x": 548.5256069661629,
+          "y": -1037.113088976163
+        },
+        "data": {
+          "label": "Cita",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "f3680d0e-77e3-4f45-8a05-daa3b4e414a2",
+              "name": "id_cita",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "62ea9db6-badb-4114-8c0d-30141f660b92",
+              "name": "motivo_cita",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "150",
+              "isOptional": false
+            },
+            {
+              "id": "2c102486-cce4-4070-8fc0-2b86607c403c",
+              "name": "fecha_cita",
+              "type": "DATE",
+              "position": 0,
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "e4809c7a-2e3c-43b1-b505-5b36234425b0",
+              "name": "hora_cita",
+              "type": "DATE",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "10",
+              "isOptional": false
+            },
+            {
+              "id": "b9eae741-3fe7-436b-8508-4a9776673803",
+              "name": "observaciones_cita",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": true
+            },
+            {
+              "id": "e371c278-a7a8-4a62-bd02-3688a56598c2",
+              "name": "estado_cita",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "15",
+              "isOptional": false
+            },
+            {
+              "id": "fk_3c792d72-b91b-4285-8be7-c34037af37fb",
+              "name": "fk_Mascota",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "602f322d-99e8-4ff9-ac8b-17cd95218067",
+                "sourceTableId": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+                "columns": [
+                  {
+                    "id": "fk_e65f554e-3fa2-4c2e-b973-6ce4d52cb407",
+                    "name": "id_mascota",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "fk_01b9888d-9d5b-400a-882c-b90be187edaf",
+              "name": "fk_Veterinario",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "013d5944-cbe8-48f6-8fd2-1335ef02953b",
+                "sourceTableId": "d0c57d8f-e40f-4812-8f74-a7b6808bae92",
+                "columns": [
+                  {
+                    "id": "fk_97665d54-781e-4200-9d87-2ca4e19423c0",
+                    "name": "id_veterinario",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 226
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b13fef49-ba2d-41dd-bd22-379caa1a18b0",
+        "type": "Table",
+        "position": {
+          "x": 1258.0064557465694,
+          "y": -1334.8920869845178
+        },
+        "data": {
+          "label": "Factura_Detalle",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "cea5a7c1-dfb1-4422-a90d-ebc386b80730",
+              "name": "id_factura_detalle",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "7a342c0f-93d0-42f6-84b0-f9a7f6cd0206",
+              "name": "concepto_detalle",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "100",
+              "isOptional": false
+            },
+            {
+              "id": "8bd2f5c4-cd3c-4d4c-bd71-d0f071bf8764",
+              "name": "descripcion_detalle",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "255",
+              "isOptional": true
+            },
+            {
+              "id": "cb9d7fbf-9c90-4161-80a9-8ff22947eea8",
+              "name": "cantidad",
+              "type": "INT",
+              "position": 0
+            },
+            {
+              "id": "9e05d534-c998-46b7-acdc-b06f836e479b",
+              "name": "precio_unitario",
+              "type": "NUMERIC(p s)",
+              "position": 0,
+              "size": "(8,2)"
+            },
+            {
+              "id": "d4de955f-0979-4dd4-a42c-2b1b83fe9dcf",
+              "name": "subtotal",
+              "type": "NUMERIC(p s)",
+              "position": 0,
+              "size": "(8,2)"
+            },
+            {
+              "id": "fk_404ecab1-4d93-481a-a583-b4b78a015edb",
+              "name": "fk_Factura",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "b1854066-e5e8-40ec-8e9d-774f9982de5a",
+                "sourceTableId": "6ac38f85-fc31-41d3-983a-6a1370a59a09",
+                "columns": [
+                  {
+                    "id": "fk_7bfffc7e-f4cc-4123-8cfb-2a28bc28c4a2",
+                    "name": "id_factura",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 201
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "6521e63c-f142-45bc-b13c-cb27744153ea",
+        "type": "Table",
+        "position": {
+          "x": -128.9337554187744,
+          "y": -818.6026600800752
+        },
+        "data": {
+          "label": "Tratamiento",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "afb86c5a-f153-446e-9ced-26a3ac219f86",
+              "name": "id_tratamiento",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "abf6ed96-7e62-41ae-a6be-96a9612ecf66",
+              "name": "nombre_tratamiento",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "size": "100",
+              "isOptional": false
+            },
+            {
+              "id": "e9e25c69-b273-4679-b0a0-0298164e3c4d",
+              "name": "descripcion_tratamiento",
+              "type": "VARCHAR(n)",
+              "position": 2,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": false
+            },
+            {
+              "id": "93fef15b-9803-4ff4-9235-aa5c4a57d7d3",
+              "name": "fecha_inicio",
+              "type": "DATE",
+              "position": 3,
+              "isPrimaryKey": false,
+              "isOptional": false
+            },
+            {
+              "id": "dbea0d0f-e1e6-4e16-8b7f-c4e66f49f4e8",
+              "name": "fecha_fin",
+              "type": "DATE",
+              "position": 4,
+              "isPrimaryKey": false,
+              "isOptional": true
+            },
+            {
+              "id": "64256e36-1ce7-47b6-a64f-031a0513e695",
+              "name": "estado_tratamiento",
+              "type": "VARCHAR(n)",
+              "position": 5,
+              "isOptional": false,
+              "size": "15"
+            },
+            {
+              "id": "fk_83866b33-93b9-45b3-a29a-138b9d69893f",
+              "name": "fk_Diagnostico",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "ba7cdcbb-4a70-4e59-b9ed-2a5761d5b36f",
+                "sourceTableId": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+                "columns": [
+                  {
+                    "id": "fk_3a8d89dd-1b54-411f-9a60-76823b29a4ca",
+                    "name": "id_diagnostico",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false,
+              "position": 6
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 217
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "de156daf-8597-4d23-b031-90dd4997a66c",
+        "type": "Table",
+        "position": {
+          "x": -129.43340481678,
+          "y": -410.4101669023882
+        },
+        "data": {
+          "label": "Medicamento",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "3637d63f-e57b-4bfd-a430-5c0c445e9bab",
+              "name": "id_medicamento",
+              "type": "INT",
+              "position": 0,
+              "isOptional": false,
+              "isPrimaryKey": true,
+              "isUnique": false
+            },
+            {
+              "id": "faf8955c-51a7-4814-82e5-53d8e6fe82be",
+              "name": "nombre_medicamento",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "isOptional": false,
+              "size": "80",
+              "isPrimaryKey": false,
+              "isUnique": true
+            },
+            {
+              "id": "82785356-9ae6-46f9-b3c1-48cd7971d024",
+              "name": "tipo_medicamento",
+              "type": "VARCHAR(n)",
+              "position": 2,
+              "isOptional": false,
+              "size": "40",
+              "isPrimaryKey": false,
+              "isUnique": false
+            },
+            {
+              "id": "fc98bb1d-ea62-4fba-845c-396db2fb5733",
+              "name": "descripcion_medicamento",
+              "type": "VARCHAR(n)",
+              "position": 3,
+              "size": "255",
+              "isOptional": true,
+              "isUnique": false
+            },
+            {
+              "id": "744588b2-3c29-42ab-b0fd-c6ebc864652b",
+              "name": "precio_medicamento",
+              "type": "NUMERIC(p s)",
+              "position": 4,
+              "size": "(8,2)",
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "9827e030-c6fe-4d57-9f02-cef82d92127a",
+              "name": "estado_medicamento",
+              "type": "VARCHAR(n)",
+              "position": 5,
+              "size": "15",
+              "isOptional": false,
+              "isUnique": false
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 191
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1fde9f24-b828-4623-9740-3f86f3ac7dc8",
+        "type": "Table",
+        "position": {
+          "x": -430.4936348956436,
+          "y": -716.6414533997109
+        },
+        "data": {
+          "label": "Tratamiento_Medicamento",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "33608d87-65f1-45d9-93bb-d83428004237",
+              "name": "id_tratamiento_medicamento",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "2ca1f0e0-806a-4a84-9af6-0c3943c5ce99",
+              "name": "dosis_indicada",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "80",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "1d815ef1-6ab0-4ab2-b02d-0307ca94eb20",
+              "name": "frecuencia_administracion",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "80",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "a7be4482-e28b-4084-a7be-1fb53d9fab6d",
+              "name": "via_administracion",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false,
+              "size": "30"
+            },
+            {
+              "id": "fk_4fd46d51-c829-427b-8d95-077f95744d17",
+              "name": "fk_Tratamiento",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "f26fe269-883e-43c4-8f77-48ea9f7a3577",
+                "sourceTableId": "6521e63c-f142-45bc-b13c-cb27744153ea",
+                "columns": [
+                  {
+                    "id": "fk_afb86c5a-f153-446e-9ced-26a3ac219f86",
+                    "name": "id_tratamiento",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_918263e2-47f2-4dd4-b679-62ae1fd46b3e",
+              "name": "fk_Medicamento",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "ef59f7b7-58d7-4f65-ae30-f6863cdd5c2e",
+                "sourceTableId": "de156daf-8597-4d23-b031-90dd4997a66c",
+                "columns": [
+                  {
+                    "id": "fk_3637d63f-e57b-4bfd-a430-5c0c445e9bab",
+                    "name": "id_medicamento",
+                    "type": "INT"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e437fca1-a4c8-43bb-b86a-91233cf8d141",
+              "name": "duracion_dias",
+              "type": "INT",
+              "position": 0
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 257
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+        "type": "Table",
+        "position": {
+          "x": 177.74182094782756,
+          "y": -1210.5808944177015
+        },
+        "data": {
+          "label": "Diagnostico",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "3a8d89dd-1b54-411f-9a60-76823b29a4ca",
+              "name": "id_diagnostico",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "631733d0-5c7d-4a00-83ad-5949deee57be",
+              "name": "descripcion_diagnostico",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": false
+            },
+            {
+              "id": "90fc3cae-51db-44a1-b2f7-2d214a0a8c34",
+              "name": "fecha_diagnostico",
+              "type": "DATE",
+              "position": 2,
+              "isOptional": false
+            },
+            {
+              "id": "bf5ef191-f70b-419e-a0fd-1340abe368ab",
+              "name": "observaciones_diagnostico",
+              "type": "VARCHAR(n)",
+              "position": 3,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": true
+            },
+            {
+              "id": "f2db5276-b35c-4742-b7e5-cb8c98384ad9",
+              "name": "indicaciones_diagnostico",
+              "type": "VARCHAR(n)",
+              "position": 4,
+              "isPrimaryKey": false,
+              "size": "255",
+              "isOptional": true
+            },
+            {
+              "id": "fk_66a72951-3392-4285-a133-6bd7a82e24c4",
+              "name": "fk_Cita",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "86ccb8f0-f8e5-4f9b-8d2b-c3cc222eb593",
+                "sourceTableId": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+                "columns": [
+                  {
+                    "id": "fk_f3680d0e-77e3-4f45-8a05-daa3b4e414a2",
+                    "name": "id_cita",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false,
+              "position": 5
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 224
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "6ac38f85-fc31-41d3-983a-6a1370a59a09",
+        "type": "Table",
+        "position": {
+          "x": 929.1751461095141,
+          "y": -1186.3834578189333
+        },
+        "data": {
+          "label": "Factura",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "7bfffc7e-f4cc-4123-8cfb-2a28bc28c4a2",
+              "name": "id_factura",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false,
+              "isUnique": false
+            },
+            {
+              "id": "62b69f40-9f8a-4ebe-b4cd-0a0e9a7edf64",
+              "name": "numero_factura",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "size": "20",
+              "isUnique": true
+            },
+            {
+              "id": "66af8536-540d-4bb4-be4e-0e46a99171fa",
+              "name": "fecha_emision",
+              "type": "DATE",
+              "position": 2,
+              "isUnique": false
+            },
+            {
+              "id": "1005d28f-15ed-44dd-b2a6-60ba02a89dac",
+              "name": "metodo_pago",
+              "type": "VARCHAR(n)",
+              "position": 3,
+              "size": "30",
+              "isUnique": false
+            },
+            {
+              "id": "b6a3130b-49e1-453e-9331-4db2c47ef5c6",
+              "name": "estado_factura",
+              "type": "VARCHAR(n)",
+              "position": 4,
+              "size": "15",
+              "isUnique": false
+            },
+            {
+              "id": "fk_9b68af88-17d1-4edf-b357-b4e070c8c480",
+              "name": "fk_Cita",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "728bb43b-648b-45d6-81ef-dabd914ed5d2",
+                "sourceTableId": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+                "columns": [
+                  {
+                    "id": "fk_f3680d0e-77e3-4f45-8a05-daa3b4e414a2",
+                    "name": "id_cita",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "position": 5,
+              "isUnique": false
+            },
+            {
+              "id": "1549120b-c573-4bb0-b66f-8424b4cfbf6a",
+              "name": "total_factura",
+              "type": "NUMERIC(p s)",
+              "position": 5,
+              "isUnique": false,
+              "size": "(10,2)"
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 201
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "c47fc56c-021b-40b2-82f7-9b0577d7e910",
+        "type": "Table",
+        "position": {
+          "x": 582.8913187940497,
+          "y": -1328.5874019827643
+        },
+        "data": {
+          "label": "Procedimiento",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "f8c2646f-80bd-4266-9f18-c806ddef54c9",
+              "name": "id_procedimiento",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "ea1e0261-9141-46b5-b27c-5403d0124dae",
+              "name": "nombre_procedimiento",
+              "type": "VARCHAR(n)",
+              "position": 1,
+              "size": "100",
+              "isOptional": false
+            },
+            {
+              "id": "dfd0037f-ccfc-4e37-b3d0-0b9dd2d213dc",
+              "name": "descripcion_procedimiento",
+              "type": "VARCHAR(n)",
+              "position": 2,
+              "size": "255",
+              "isOptional": true
+            },
+            {
+              "id": "16ab31fe-677b-4275-9eb4-b49afb6bf433",
+              "name": "estado_procedimiento",
+              "type": "VARCHAR(n)",
+              "position": 3,
+              "isOptional": false,
+              "size": "15"
+            },
+            {
+              "id": "fk_d32bfe5c-38d6-42ec-a13c-d697f6ea4908",
+              "name": "fk_Diagnostico",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "757318fa-5461-4b37-9a75-e8a268c65c60",
+                "sourceTableId": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+                "columns": [
+                  {
+                    "id": "fk_3a8d89dd-1b54-411f-9a60-76823b29a4ca",
+                    "name": "id_diagnostico",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false,
+              "position": 4
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 167
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "4b039b74-a7a4-40ca-96a1-fc136f0924a5",
+        "type": "Table",
+        "position": {
+          "x": 548.3999987443601,
+          "y": -640.1823534616067
+        },
+        "data": {
+          "label": "Mascota_Alergia",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "6a8c28da-6996-48d8-b826-31dcec678395",
+              "name": "id_mascota_alergia",
+              "type": "INT",
+              "position": 0,
+              "isOptional": false,
+              "isPrimaryKey": true
+            },
+            {
+              "id": "0eed2afb-4340-48ff-a5ad-7eef97afa269",
+              "name": "descripcion_alergia",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "255",
+              "isOptional": true,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_308a2f70-33b6-4797-8738-7ab76181248f",
+              "name": "fk_Mascota",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "bceea2e0-c3df-48a4-96b9-40ba0d26b1fe",
+                "sourceTableId": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+                "columns": [
+                  {
+                    "id": "fk_e65f554e-3fa2-4c2e-b973-6ce4d52cb407",
+                    "name": "id_mascota",
+                    "type": "INT"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "fk_6849dcb9-8b27-4a70-9b3e-0d7a2a65ef04",
+              "name": "fk_Medicamento",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "a56376f3-436f-42a3-ac49-df7346ecf446",
+                "sourceTableId": "de156daf-8597-4d23-b031-90dd4997a66c",
+                "columns": [
+                  {
+                    "id": "fk_3637d63f-e57b-4bfd-a430-5c0c445e9bab",
+                    "name": "id_medicamento",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 126
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "7795af11-9467-401e-9171-0d3c98de89ca",
+        "type": "Label",
+        "position": {
+          "x": 829,
+          "y": -449
+        },
+        "data": {
+          "label": "clasifica",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 82,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "310ac870-684e-412b-ba6f-ef304d7aeba7",
+        "type": "Label",
+        "position": {
+          "x": 1103,
+          "y": -577
+        },
+        "data": {
+          "label": "posee",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 66,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "becf257e-87c4-4c50-aea0-1e35fc476ea2",
+        "type": "Label",
+        "position": {
+          "x": 727.4530109180306,
+          "y": -700.2686293181165
+        },
+        "data": {
+          "label": "presenta",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 86,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "f211d5f9-5d54-4af3-ab78-8a5fd4e772fa",
+        "type": "Label",
+        "position": {
+          "x": 190.40490168534814,
+          "y": -544.4539159354674
+        },
+        "data": {
+          "label": "pertenece",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 97,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "985fd432-1845-4585-873b-459f263eb7db",
+        "type": "Label",
+        "position": {
+          "x": -237.02717057513456,
+          "y": -432.2908898812982
+        },
+        "data": {
+          "label": "asocia",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 69,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "d5633a17-45bd-451d-936d-6c81e260d539",
+        "type": "Label",
+        "position": {
+          "x": -237.02717057513456,
+          "y": -780.9057005902025
+        },
+        "data": {
+          "label": "asocia",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 69,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b99524cf-81bc-40de-8ac5-0b18f59d0bcf",
+        "type": "Label",
+        "position": {
+          "x": 349.5551413568044,
+          "y": -467.1523709521886
+        },
+        "data": {
+          "label": "presenta",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 86,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "f6422bb3-a283-43d0-92ac-62d2a880c10f",
+        "type": "Label",
+        "position": {
+          "x": 827.0058603711734,
+          "y": -859.7229621417808
+        },
+        "data": {
+          "label": "tiene",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 57,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "18865429-a8e5-45aa-9677-a0aea68c0871",
+        "type": "Label",
+        "position": {
+          "x": 465.0639319135645,
+          "y": -872.8929142074895
+        },
+        "data": {
+          "label": "atiende",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 76,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "0148d3a5-3cdb-40df-8b92-7f42b4fda620",
+        "type": "Label",
+        "position": {
+          "x": 809.1315929175701,
+          "y": -1063.8732018132373
+        },
+        "data": {
+          "label": "contiene",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 85,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "0fab8912-1d57-4b65-be46-3b47e7d775ec",
+        "type": "Label",
+        "position": {
+          "x": 1172.9035693094702,
+          "y": -1141.174746796516
+        },
+        "data": {
+          "label": "muestra",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 81,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "fb031e18-535a-4cf4-8ebc-eb09c668a4d7",
+        "type": "Label",
+        "position": {
+          "x": 469.6110816184632,
+          "y": -1229.0863077578917
+        },
+        "data": {
+          "label": "incluye",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 73,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "d1b98cf1-7b57-4cfa-83b2-43e4ffe9a925",
+        "type": "Label",
+        "position": {
+          "x": 72.4933407239722,
+          "y": -950.1944591907684
+        },
+        "data": {
+          "label": "incluye",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 73,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "e68b67a7-29cd-4998-95d8-21b47603061f",
+        "type": "Label",
+        "position": {
+          "x": 448.39104966226904,
+          "y": -1057.8103355400387
+        },
+        "data": {
+          "label": "genera",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 72,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "3090a208-0ee0-4079-804e-f248e82db8ad->4e56f799-738e-4c1d-be5a-faa4d2ab28d1_e562809e-e626-445e-90f0-7b28f8ad8378",
+        "type": "Relational",
+        "source": "3090a208-0ee0-4079-804e-f248e82db8ad",
+        "targetHandle": "foreign-key-handle-e562809e-e626-445e-90f0-7b28f8ad8378",
+        "target": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "e562809e-e626-445e-90f0-7b28f8ad8378",
+            "sourceTableId": "3090a208-0ee0-4079-804e-f248e82db8ad",
+            "columns": [
+              {
+                "id": "fk_a0dd8247-0c87-468f-a4d3-3c5668713c11",
+                "name": "id_propietario",
+                "type": "INT"
+              }
+            ]
+          }
+        },
+        "selected": false
+      },
+      {
+        "id": "296bce40-1575-4509-ad57-3659ab8438bd->4e56f799-738e-4c1d-be5a-faa4d2ab28d1_7e536bb4-b287-4e94-8366-b5cf5efece88",
+        "type": "Relational",
+        "source": "296bce40-1575-4509-ad57-3659ab8438bd",
+        "targetHandle": "foreign-key-handle-7e536bb4-b287-4e94-8366-b5cf5efece88",
+        "target": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "7e536bb4-b287-4e94-8366-b5cf5efece88",
+            "sourceTableId": "296bce40-1575-4509-ad57-3659ab8438bd",
+            "columns": [
+              {
+                "id": "fk_7a86e295-9307-4059-8600-c151dd8edf91",
+                "name": "id_especie",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1->cbc1dacf-3480-45a9-b9f8-476091b09be0_602f322d-99e8-4ff9-ac8b-17cd95218067",
+        "type": "Relational",
+        "source": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+        "targetHandle": "foreign-key-handle-602f322d-99e8-4ff9-ac8b-17cd95218067",
+        "target": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "602f322d-99e8-4ff9-ac8b-17cd95218067",
+            "sourceTableId": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+            "columns": [
+              {
+                "id": "fk_e65f554e-3fa2-4c2e-b973-6ce4d52cb407",
+                "name": "id_mascota",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "d0c57d8f-e40f-4812-8f74-a7b6808bae92->cbc1dacf-3480-45a9-b9f8-476091b09be0_013d5944-cbe8-48f6-8fd2-1335ef02953b",
+        "type": "Relational",
+        "source": "d0c57d8f-e40f-4812-8f74-a7b6808bae92",
+        "targetHandle": "foreign-key-handle-013d5944-cbe8-48f6-8fd2-1335ef02953b",
+        "target": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "013d5944-cbe8-48f6-8fd2-1335ef02953b",
+            "sourceTableId": "d0c57d8f-e40f-4812-8f74-a7b6808bae92",
+            "columns": [
+              {
+                "id": "fk_97665d54-781e-4200-9d87-2ca4e19423c0",
+                "name": "id_veterinario",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "9656b6cd-d188-4fde-a944-5aef4ffdb6b6->d0c57d8f-e40f-4812-8f74-a7b6808bae92_ec9e3198-4bf2-4d64-89cd-2afebe39a414",
+        "type": "Relational",
+        "source": "9656b6cd-d188-4fde-a944-5aef4ffdb6b6",
+        "targetHandle": "foreign-key-handle-ec9e3198-4bf2-4d64-89cd-2afebe39a414",
+        "target": "d0c57d8f-e40f-4812-8f74-a7b6808bae92",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "ec9e3198-4bf2-4d64-89cd-2afebe39a414",
+            "sourceTableId": "9656b6cd-d188-4fde-a944-5aef4ffdb6b6",
+            "columns": [
+              {
+                "id": "fk_0ac8dc46-353e-4ff0-81e4-47ee2b1e11b8",
+                "name": "id_especialidad",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cbc1dacf-3480-45a9-b9f8-476091b09be0->7d9fe495-a954-4ba5-9327-bc0090367de1_86ccb8f0-f8e5-4f9b-8d2b-c3cc222eb593",
+        "type": "Relational",
+        "source": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+        "targetHandle": "foreign-key-handle-86ccb8f0-f8e5-4f9b-8d2b-c3cc222eb593",
+        "target": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "86ccb8f0-f8e5-4f9b-8d2b-c3cc222eb593",
+            "sourceTableId": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+            "columns": [
+              {
+                "id": "fk_f3680d0e-77e3-4f45-8a05-daa3b4e414a2",
+                "name": "id_cita",
+                "type": "INT"
+              }
+            ]
+          }
+        },
+        "selected": false
+      },
+      {
+        "id": "7d9fe495-a954-4ba5-9327-bc0090367de1->6521e63c-f142-45bc-b13c-cb27744153ea_ba7cdcbb-4a70-4e59-b9ed-2a5761d5b36f",
+        "type": "Relational",
+        "source": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+        "targetHandle": "foreign-key-handle-ba7cdcbb-4a70-4e59-b9ed-2a5761d5b36f",
+        "target": "6521e63c-f142-45bc-b13c-cb27744153ea",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "ba7cdcbb-4a70-4e59-b9ed-2a5761d5b36f",
+            "sourceTableId": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+            "columns": [
+              {
+                "id": "fk_3a8d89dd-1b54-411f-9a60-76823b29a4ca",
+                "name": "id_diagnostico",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6521e63c-f142-45bc-b13c-cb27744153ea->1fde9f24-b828-4623-9740-3f86f3ac7dc8_f26fe269-883e-43c4-8f77-48ea9f7a3577",
+        "type": "Relational",
+        "source": "6521e63c-f142-45bc-b13c-cb27744153ea",
+        "targetHandle": "foreign-key-handle-f26fe269-883e-43c4-8f77-48ea9f7a3577",
+        "target": "1fde9f24-b828-4623-9740-3f86f3ac7dc8",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "f26fe269-883e-43c4-8f77-48ea9f7a3577",
+            "sourceTableId": "6521e63c-f142-45bc-b13c-cb27744153ea",
+            "columns": [
+              {
+                "id": "fk_afb86c5a-f153-446e-9ced-26a3ac219f86",
+                "name": "id_tratamiento",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "de156daf-8597-4d23-b031-90dd4997a66c->1fde9f24-b828-4623-9740-3f86f3ac7dc8_ef59f7b7-58d7-4f65-ae30-f6863cdd5c2e",
+        "type": "Relational",
+        "source": "de156daf-8597-4d23-b031-90dd4997a66c",
+        "targetHandle": "foreign-key-handle-ef59f7b7-58d7-4f65-ae30-f6863cdd5c2e",
+        "target": "1fde9f24-b828-4623-9740-3f86f3ac7dc8",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "ef59f7b7-58d7-4f65-ae30-f6863cdd5c2e",
+            "sourceTableId": "de156daf-8597-4d23-b031-90dd4997a66c",
+            "columns": [
+              {
+                "id": "fk_3637d63f-e57b-4bfd-a430-5c0c445e9bab",
+                "name": "id_medicamento",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "cbc1dacf-3480-45a9-b9f8-476091b09be0->6ac38f85-fc31-41d3-983a-6a1370a59a09_728bb43b-648b-45d6-81ef-dabd914ed5d2",
+        "type": "Relational",
+        "source": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+        "targetHandle": "foreign-key-handle-728bb43b-648b-45d6-81ef-dabd914ed5d2",
+        "target": "6ac38f85-fc31-41d3-983a-6a1370a59a09",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "728bb43b-648b-45d6-81ef-dabd914ed5d2",
+            "sourceTableId": "cbc1dacf-3480-45a9-b9f8-476091b09be0",
+            "columns": [
+              {
+                "id": "fk_f3680d0e-77e3-4f45-8a05-daa3b4e414a2",
+                "name": "id_cita",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "6ac38f85-fc31-41d3-983a-6a1370a59a09->b13fef49-ba2d-41dd-bd22-379caa1a18b0_b1854066-e5e8-40ec-8e9d-774f9982de5a",
+        "type": "Relational",
+        "source": "6ac38f85-fc31-41d3-983a-6a1370a59a09",
+        "targetHandle": "foreign-key-handle-b1854066-e5e8-40ec-8e9d-774f9982de5a",
+        "target": "b13fef49-ba2d-41dd-bd22-379caa1a18b0",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "b1854066-e5e8-40ec-8e9d-774f9982de5a",
+            "sourceTableId": "6ac38f85-fc31-41d3-983a-6a1370a59a09",
+            "columns": [
+              {
+                "id": "fk_7bfffc7e-f4cc-4123-8cfb-2a28bc28c4a2",
+                "name": "id_factura",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "7d9fe495-a954-4ba5-9327-bc0090367de1->c47fc56c-021b-40b2-82f7-9b0577d7e910_757318fa-5461-4b37-9a75-e8a268c65c60",
+        "type": "Relational",
+        "source": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+        "targetHandle": "foreign-key-handle-757318fa-5461-4b37-9a75-e8a268c65c60",
+        "target": "c47fc56c-021b-40b2-82f7-9b0577d7e910",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "757318fa-5461-4b37-9a75-e8a268c65c60",
+            "sourceTableId": "7d9fe495-a954-4ba5-9327-bc0090367de1",
+            "columns": [
+              {
+                "id": "fk_3a8d89dd-1b54-411f-9a60-76823b29a4ca",
+                "name": "id_diagnostico",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1->4b039b74-a7a4-40ca-96a1-fc136f0924a5_bceea2e0-c3df-48a4-96b9-40ba0d26b1fe",
+        "type": "Relational",
+        "source": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+        "targetHandle": "foreign-key-handle-bceea2e0-c3df-48a4-96b9-40ba0d26b1fe",
+        "target": "4b039b74-a7a4-40ca-96a1-fc136f0924a5",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "bceea2e0-c3df-48a4-96b9-40ba0d26b1fe",
+            "sourceTableId": "4e56f799-738e-4c1d-be5a-faa4d2ab28d1",
+            "columns": [
+              {
+                "id": "fk_e65f554e-3fa2-4c2e-b973-6ce4d52cb407",
+                "name": "id_mascota",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "de156daf-8597-4d23-b031-90dd4997a66c->4b039b74-a7a4-40ca-96a1-fc136f0924a5_a56376f3-436f-42a3-ac49-df7346ecf446",
+        "type": "Relational",
+        "source": "de156daf-8597-4d23-b031-90dd4997a66c",
+        "targetHandle": "foreign-key-handle-a56376f3-436f-42a3-ac49-df7346ecf446",
+        "target": "4b039b74-a7a4-40ca-96a1-fc136f0924a5",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "a56376f3-436f-42a3-ac49-df7346ecf446",
+            "sourceTableId": "de156daf-8597-4d23-b031-90dd4997a66c",
+            "columns": [
+              {
+                "id": "fk_3637d63f-e57b-4bfd-a430-5c0c445e9bab",
+                "name": "id_medicamento",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 567.2835596863047,
+      "y": 771.7600584344086,
+      "zoom": 0.5137482847187063
+    }
+  },
+  "name": "Veterinaria MR",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 268082
+  },
+  "id": 442819,
+  "updatedAtTimestamp": 1781752721
+}
