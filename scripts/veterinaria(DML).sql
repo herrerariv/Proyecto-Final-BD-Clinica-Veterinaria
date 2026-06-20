@@ -2150,3 +2150,23 @@ INSERT INTO factura_detalle (id_factura_detalle, concepto_detalle, descripcion_d
     (378, 'Servicio clinico', 'Procedimiento o medicamento asociado', 1, 35.00, 35.00, 189),
     (379, 'Consulta veterinaria', 'Consulta general de la mascota', 1, 20.00, 20.00, 190),
     (380, 'Servicio clinico', 'Procedimiento o medicamento asociado', 1, 15.00, 15.00, 190);
+-- ============================================================
+-- AJUSTE DE SECUENCIAS
+-- ============================================================
+-- Se actualizan las secuencias de las tablas con campos SERIAL,
+-- ya que los datos del DML se insertan con IDs definidos manualmente.
+
+SELECT setval(pg_get_serial_sequence('especie', 'id_especie'), (SELECT MAX(id_especie) FROM especie));
+SELECT setval(pg_get_serial_sequence('especialidad', 'id_especialidad'), (SELECT MAX(id_especialidad) FROM especialidad));
+SELECT setval(pg_get_serial_sequence('propietario', 'id_propietario'), (SELECT MAX(id_propietario) FROM propietario));
+SELECT setval(pg_get_serial_sequence('mascota', 'id_mascota'), (SELECT MAX(id_mascota) FROM mascota));
+SELECT setval(pg_get_serial_sequence('veterinario', 'id_veterinario'), (SELECT MAX(id_veterinario) FROM veterinario));
+SELECT setval(pg_get_serial_sequence('medicamento', 'id_medicamento'), (SELECT MAX(id_medicamento) FROM medicamento));
+SELECT setval(pg_get_serial_sequence('cita', 'id_cita'), (SELECT MAX(id_cita) FROM cita));
+SELECT setval(pg_get_serial_sequence('diagnostico', 'id_diagnostico'), (SELECT MAX(id_diagnostico) FROM diagnostico));
+SELECT setval(pg_get_serial_sequence('tratamiento', 'id_tratamiento'), (SELECT MAX(id_tratamiento) FROM tratamiento));
+SELECT setval(pg_get_serial_sequence('procedimiento', 'id_procedimiento'), (SELECT MAX(id_procedimiento) FROM procedimiento));
+SELECT setval(pg_get_serial_sequence('tratamiento_medicamento', 'id_tratamiento_medicamento'), (SELECT MAX(id_tratamiento_medicamento) FROM tratamiento_medicamento));
+SELECT setval(pg_get_serial_sequence('mascota_alergia', 'id_mascota_alergia'), (SELECT MAX(id_mascota_alergia) FROM mascota_alergia));
+SELECT setval(pg_get_serial_sequence('factura', 'id_factura'), (SELECT MAX(id_factura) FROM factura));
+SELECT setval(pg_get_serial_sequence('factura_detalle', 'id_factura_detalle'), (SELECT MAX(id_factura_detalle) FROM factura_detalle));
