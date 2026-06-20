@@ -120,7 +120,7 @@ CREATE TABLE cita (
     CONSTRAINT pk_cita PRIMARY KEY (id_cita),
     CONSTRAINT fk_cita_mascota FOREIGN KEY (id_mascota) REFERENCES mascota(id_mascota) ON UPDATE CASCADE ON DELETE RESTRICT,
     CONSTRAINT fk_cita_veterinario FOREIGN KEY (id_veterinario) REFERENCES veterinario(id_veterinario) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT chk_cita_fecha CHECK (fecha_cita >= CURRENT_DATE),
+    CONSTRAINT chk_cita_fecha_estado CHECK ((estado_cita = 'Programada' AND fecha_cita >= CURRENT_DATE) OR (estado_cita IN ('Atendida', 'Cancelada') AND fecha_cita <= CURRENT_DATE)),
     CONSTRAINT chk_cita_estado CHECK (estado_cita IN ('Programada', 'Atendida', 'Cancelada'))
 );
 -- =============================================================================================================
